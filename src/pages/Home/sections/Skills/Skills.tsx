@@ -53,7 +53,7 @@ const Skills = () => {
             name: "Técnico em Informática para Internet",
             issuer: "Senac",
             date: "22/11/2024",
-            src: "./src/assets/images/tecnicoInformaticaInternet.png",
+            src: ".\src\assets\images\tecnicoInformaticaInternet.png",
             alt: "Certificado 1",
         },
         {
@@ -61,7 +61,7 @@ const Skills = () => {
             name: "Desenvolvedor Front-End",
             issuer: "Senac",
             date: "23/12/2023",
-            src: "./src/assets/images/desenvolvedorFrontEnd.png",
+            src: ".\src\assets\images\desenvolvedorFrontEnd.png",
             alt: "Certificado 2",
         },
         {
@@ -69,7 +69,7 @@ const Skills = () => {
             name: "Desenvolvedor Back-End",
             issuer: "Senac",
             date: "22/06/2024",
-            src: "./src/assets/images/desenvolvedorBackEnd.png",
+            src: ".\src\assets\images\desenvolvedorBackEnd.png",
             alt: "Certificado 3",
         },
         {
@@ -77,7 +77,7 @@ const Skills = () => {
             name: "Desenvolvedor Mobile",
             issuer: "Senac",
             date: "22/11/2024",
-            src: "./src/assets/images/desenvolvedorMobile.png",
+            src: ".\src\assets\images\desenvolvedorMobile.png",
             alt: "Certificado 4",
         },
     ];
