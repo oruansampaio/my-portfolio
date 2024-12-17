@@ -69,7 +69,7 @@ const Skills = () => {
             name: "Desenvolvedor Back-End",
             issuer: "Senac",
             date: "22/06/2024",
-            src: ".\src\assets\images\desenvolvedorBackEnd.png",
+            src: ".\src\assets\images\DesenvolvedorBackEnd.png",
             alt: "Certificado 3",
         },
         {
