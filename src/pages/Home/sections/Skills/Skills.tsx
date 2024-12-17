@@ -2,6 +2,10 @@ import { Box, Container, Typography, styled } from "@mui/material";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Certificado1 from "../../../../assets/images/TecnicoInformaticaInternet.png";
+import Certificado2 from "../../../../assets/images/DesenvolvedorFrontEnd.png";
+import Certificado3 from "../../../../assets/images/DesenvolvedorBackEnd.png";
+import Certificado4 from "../../../../assets/images/DesenvolvedorMobile.png";
 
 const Skills = () => {
     const StyledSection = styled("div")(({ theme }) => ({
@@ -35,17 +39,6 @@ const Skills = () => {
         },
     }));
 
-    const skills = [
-        "HTML/CSS",
-        "JavaScript",
-        "TypeScript",
-        "Python",
-        "React",
-        "React Native",
-        "Node.js",
-        "Git/GitHub",
-    ];
-
     const sliderSettings = {
         dots: true,
         infinite: true,
@@ -68,10 +61,47 @@ const Skills = () => {
         ],
     };
 
+    const skills = [
+        "HTML/CSS",
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "React",
+        "React Native",
+        "Node.js",
+        "Git/GitHub",
+    ];
+
+    const certifications = [
+        {
+            image: Certificado1,
+            title: "Diploma: Técnico em Informática para Internet",
+            issuer: "Senac",
+            date: "22/11/2024",
+        },
+        {
+            image: Certificado2,
+            title: "Certificado: Desenvolvedor Front-End",
+            issuer: "Senac",
+            date: "23/12/2023",
+        },
+        {
+            image: Certificado3,
+            title: "Certificado: Desenvolvedor Back-End",
+            issuer: "Senac",
+            date: "22/06/2024",
+        },
+        {
+            image: Certificado4,
+            title: "Certificado: Desenvolvedor Mobile",
+            issuer: "Senac",
+            date: "22/11/2024",
+        },
+    ];
+
     return (
         <StyledSection>
             <Container maxWidth="lg">
-                {/* Skills Carousel */}
                 <Typography variant="h2" textAlign="center" color="secondary.contrastText" mb={4}>
                     Habilidades
                 </Typography>
@@ -89,76 +119,29 @@ const Skills = () => {
                     </Slider>
                 </CarouselContainer>
 
-                {/* Certifications Carousel */}
                 <Typography variant="h2" textAlign="center" color="secondary.contrastText" mt={8} mb={4}>
                     Certificados
                 </Typography>
                 <CarouselContainer>
                     <Slider {...sliderSettings}>
-                        <Box p={2} textAlign="center">
-                            <img
-                                src=".\src\assets\images\TecnicoInformaticaInternet.png"
-                                alt="Certificado 1"
-                                style={{ width: "100%", borderRadius: "10px" }}
-                            />
-                            <Typography variant="h6" color="secondary.contrastText" mt={2}>
-                                Diploma: Técnico em Informática para Internet
-                            </Typography>
-                            <Typography variant="body2" color="secondary.contrastText">
-                                Emitido por: Senac
-                            </Typography>
-                            <Typography variant="body2" color="secondary.contrastText">
-                                Data de Emissão: 22/11/2024
-                            </Typography>
-                        </Box>
-                        <Box p={2} textAlign="center">
-                            <img
-                                src=".\src\assets\images\DesenvolvedorFrontEnd.png"
-                                alt="Certificado 2"
-                                style={{ width: "100%", borderRadius: "10px" }}
-                            />
-                            <Typography variant="h6" color="secondary.contrastText" mt={2}>
-                                Certificado: Desenvolvedor Front-End
-                            </Typography>
-                            <Typography variant="body2" color="secondary.contrastText">
-                                Emitido por: Senac
-                            </Typography>
-                            <Typography variant="body2" color="secondary.contrastText">
-                                Data de Emissão: 23/12/2023
-                            </Typography>
-                        </Box>
-                        <Box p={2} textAlign="center">
-                            <img
-                                src=".\src\assets\images\DesenvolvedorBackEnd.png"
-                                alt="Certificado 3"
-                                style={{ width: "100%", borderRadius: "10px" }}
-                            />
-                            <Typography variant="h6" color="secondary.contrastText" mt={2}>
-                                Certificado: Desenvolvedor Back-End
-                            </Typography>
-                            <Typography variant="body2" color="secondary.contrastText">
-                                Emitido por: Senac
-                            </Typography>
-                            <Typography variant="body2" color="secondary.contrastText">
-                                Data de Emissão: 22/06/2024
-                            </Typography>
-                        </Box>
-                        <Box p={2} textAlign="center">
-                            <img
-                                src=".\src\assets\images\DesenvolvedorMobile.png"
-                                alt="Certificado 4"
-                                style={{ width: "100%", borderRadius: "10px" }}
-                            />
-                            <Typography variant="h6" color="secondary.contrastText" mt={2}>
-                                Certificado: Desenvolvedor Mobile
-                            </Typography>
-                            <Typography variant="body2" color="secondary.contrastText">
-                                Emitido por: Udemy
-                            </Typography>
-                            <Typography variant="body2" color="secondary.contrastText">
-                                Data de Emissão: 22/11/2024
-                            </Typography>
-                        </Box>
+                        {certifications.map((cert, index) => (
+                            <Box key={index} p={2} textAlign="center">
+                                <img
+                                    src={cert.image}
+                                    alt={cert.title}
+                                    style={{ width: "100%", borderRadius: "10px" }}
+                                />
+                                <Typography variant="h6" color="secondary.contrastText" mt={2}>
+                                    {cert.title}
+                                </Typography>
+                                <Typography variant="body2" color="secondary.contrastText">
+                                    Emitido por: {cert.issuer}
+                                </Typography>
+                                <Typography variant="body2" color="secondary.contrastText">
+                                    Data de Emissão: {cert.date}
+                                </Typography>
+                            </Box>
+                        ))}
                     </Slider>
                 </CarouselContainer>
             </Container>

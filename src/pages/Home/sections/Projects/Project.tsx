@@ -1,4 +1,5 @@
 import { Box, Button, Container, Grid, Typography, styled } from "@mui/material";
+import ExploreImage from "../../../../assets/images/projetoExplore.png";
 
 const Projects = () => {
     const StyledProjects = styled("div")(({ theme }) => ({
@@ -38,6 +39,26 @@ const Projects = () => {
         },
     }));
 
+    const projects = [
+        {
+            image: ExploreImage,
+            title: "Aplicativo Explore",
+            description:
+                "Projeto finalista da competição CRIA Senac 2024. O Explore é o protótipo de um aplicativo de rede social que visa aproximar o usuário das pessoas, locais e eventos próximos a sua localização.",
+            links: [
+                {
+                    label: "Ver o Projeto",
+                    url: "https://www.behance.net/gallery/202163131/EXPLORE-Crie-Conexoes-Com-O-Seu-Mundo",
+                },
+                {
+                    label: "Ver a Competição",
+                    url: "https://www.instagram.com/senac.saomiguel/reel/C-_I1yopk0u/",
+                },
+            ],
+        },
+        // Adicione mais projetos aqui no mesmo formato
+    ];
+
     return (
         <StyledProjects>
             <Container maxWidth="lg">
@@ -45,43 +66,32 @@ const Projects = () => {
                     Projetos
                 </Typography>
                 <Grid container spacing={4}>
-                    <Grid item xs={12} md={4}>
-                        <ProjectCard>
-                            <ProjectImage src=".\src\assets\images\projetoExplore.png" alt="Aplicativo Explore" />
-                            <ProjectContent>
-                                <Typography variant="h6" color="text.primary" mb={1}>
-                                    Aplicativo Explore
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary" mb={2}>
-                                    Projeto finalista da competição CRIA Senac 2024. O Explore é o protótipo de um aplicativo de rede social que visa aproximar o usuário das pessoas, locais e eventos próximos a sua localização.
-                                </Typography>
-                                <Box display="flex" justifyContent="space-between">
-                                    <StyledButton
-                                        variant="contained"
-                                        onClick={() =>
-                                            window.open(
-                                                "https://www.behance.net/gallery/202163131/EXPLORE-Crie-Conexoes-Com-O-Seu-Mundo",
-                                                "_blank"
-                                            )
-                                        }
-                                    >
-                                        Ver o Projeto
-                                    </StyledButton>
-                                    <StyledButton
-                                        variant="contained"
-                                        onClick={() =>
-                                            window.open(
-                                                "https://www.instagram.com/senac.saomiguel/reel/C-_I1yopk0u/"
-                                            )
-                                        }
-                                    >
-                                        Ver a Competição
-                                    </StyledButton>
-                                </Box>
-                            </ProjectContent>
-                        </ProjectCard>
-                    </Grid>
-                    {/* Adicione outros cards de projeto aqui manualmente */}
+                    {projects.map((project, index) => (
+                        <Grid item xs={12} md={4} key={index}>
+                            <ProjectCard>
+                                <ProjectImage src={project.image} alt={project.title} />
+                                <ProjectContent>
+                                    <Typography variant="h6" color="text.primary" mb={1}>
+                                        {project.title}
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary" mb={2}>
+                                        {project.description}
+                                    </Typography>
+                                    <Box display="flex" justifyContent="space-between">
+                                        {project.links.map((link, linkIndex) => (
+                                            <StyledButton
+                                                key={linkIndex}
+                                                variant="contained"
+                                                onClick={() => window.open(link.url, "_blank")}
+                                            >
+                                                {link.label}
+                                            </StyledButton>
+                                        ))}
+                                    </Box>
+                                </ProjectContent>
+                            </ProjectCard>
+                        </Grid>
+                    ))}
                 </Grid>
             </Container>
         </StyledProjects>
