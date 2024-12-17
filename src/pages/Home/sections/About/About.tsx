@@ -30,9 +30,11 @@ const About = () => {
             <Container maxWidth="lg">
                 <StyledTitle variant="h2">Sobre Mim</StyledTitle>
                 <StyledDescription>
-                    Olá! Meu nome é Ruan Sampaio e sou desenvolvedor web e mobile com foco em criar soluções tecnológicas eficientes e elegantes. 
-                    Minha paixão pela programação começou no ensino técnico e, desde então, venho me especializando em diferentes tecnologias e frameworks.
-                    Além disso, tenho experiência com projetos que vão desde aplicações interativas a soluções complexas utilizando frameworks modernos.
+                Minha jornada com a programação começou no curso técnico de Informática para Internet no Senac Guaratinguetá, onde aprendi a criar sites e apps funcionais usando React.js, React Native e Node.js. Durante esse período, também me aprofundei em JavaScript, Python e no uso de bancos de dados como MySQL e Firebase.
+
+No Senac, participei da competição Cria Senac 2024 e cheguei à final com meu projeto Explore — um app que usa geolocalização para mostrar pontos turísticos próximos. Essa experiência me fez perceber minha paixão por criar soluções que agregam na vida prática das pessoas.
+
+Agora, estou cursando Engenharia da Computação na Univesp e sigo explorando novas formas de usar a tecnologia para resolver problemas do mundo real.
                 </StyledDescription>
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={6}>

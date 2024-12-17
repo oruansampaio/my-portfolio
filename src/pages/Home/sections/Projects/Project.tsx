@@ -38,69 +38,50 @@ const Projects = () => {
         },
     }));
 
-    const projects = [
-        {
-            id: 1,
-            name: "Projeto 1",
-            description: "Breve descrição do projeto 1.",
-            image: "https://via.placeholder.com/400x200",
-            liveLink: "https://example.com/projeto1",
-            codeLink: "https://github.com/seu-usuario/projeto1",
-        },
-        {
-            id: 2,
-            name: "Projeto 2",
-            description: "Breve descrição do projeto 2.",
-            image: "https://via.placeholder.com/400x200",
-            liveLink: "https://example.com/projeto2",
-            codeLink: "https://github.com/seu-usuario/projeto2",
-        },
-        {
-            id: 3,
-            name: "Projeto 3",
-            description: "Breve descrição do projeto 3.",
-            image: "https://via.placeholder.com/400x200",
-            liveLink: "https://example.com/projeto3",
-            codeLink: "https://github.com/seu-usuario/projeto3",
-        },
-    ];
-
     return (
         <StyledProjects>
             <Container maxWidth="lg">
                 <Typography variant="h2" textAlign="center" color="text.primary" mb={4}>
-                    Projects
+                    Projetos
                 </Typography>
                 <Grid container spacing={4}>
-                    {projects.map((project) => (
-                        <Grid item xs={12} md={4} key={project.id}>
-                            <ProjectCard>
-                                <ProjectImage src={project.image} alt={project.name} />
-                                <ProjectContent>
-                                    <Typography variant="h6" color="text.primary" mb={1}>
-                                        {project.name}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary" mb={2}>
-                                        {project.description}
-                                    </Typography>
-                                    <Box display="flex" justifyContent="space-between">
-                                        <StyledButton
-                                            variant="contained"
-                                            onClick={() => window.open(project.liveLink, "_blank")}
-                                        >
-                                            Ver o Projeto
-                                        </StyledButton>
-                                        <StyledButton
-                                            variant="contained"
-                                            onClick={() => window.open(project.codeLink, "_blank")}
-                                        >
-                                            Ver o Código
-                                        </StyledButton>
-                                    </Box>
-                                </ProjectContent>
-                            </ProjectCard>
-                        </Grid>
-                    ))}
+                    <Grid item xs={12} md={4}>
+                        <ProjectCard>
+                            <ProjectImage src="src\assets\images\projetoExplore.png" alt="Aplicativo Explore" />
+                            <ProjectContent>
+                                <Typography variant="h6" color="text.primary" mb={1}>
+                                    Aplicativo Explore
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary" mb={2}>
+                                    Projeto finalista da competição CRIA Senac 2024. O Explore é o protótipo de um aplicativo de rede social que visa aproximar o usuário das pessoas, locais e eventos próximos a sua localização.
+                                </Typography>
+                                <Box display="flex" justifyContent="space-between">
+                                    <StyledButton
+                                        variant="contained"
+                                        onClick={() =>
+                                            window.open(
+                                                "https://www.behance.net/gallery/202163131/EXPLORE-Crie-Conexoes-Com-O-Seu-Mundo",
+                                                "_blank"
+                                            )
+                                        }
+                                    >
+                                        Ver o Projeto
+                                    </StyledButton>
+                                    <StyledButton
+                                        variant="contained"
+                                        onClick={() =>
+                                            window.open(
+                                                "https://www.instagram.com/senac.saomiguel/reel/C-_I1yopk0u/"
+                                            )
+                                        }
+                                    >
+                                        Ver a Competição
+                                    </StyledButton>
+                                </Box>
+                            </ProjectContent>
+                        </ProjectCard>
+                    </Grid>
+                    {/* Adicione outros cards de projeto aqui manualmente */}
                 </Grid>
             </Container>
         </StyledProjects>
