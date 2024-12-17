@@ -1,5 +1,6 @@
 import { Box, Button, Container, Grid, Typography, styled } from "@mui/material";
 import ExploreImage from "../../../../assets/images/projetoExplore.png";
+import Portfolio from "../../../../assets/images/portfolio.jpg";
 
 const Projects = () => {
     const StyledProjects = styled("div")(({ theme }) => ({
@@ -44,15 +45,31 @@ const Projects = () => {
             image: ExploreImage,
             title: "Aplicativo Explore",
             description:
-                "Projeto finalista da competição CRIA Senac 2024. O Explore é o protótipo de um aplicativo de rede social que visa aproximar o usuário das pessoas, locais e eventos próximos a sua localização.",
+                "Projeto finalista da competição CRIA Senac 2024. O Explore é o protótipo de um aplicativo de rede social.",
             links: [
                 {
                     label: "Ver o Projeto",
                     url: "https://www.behance.net/gallery/202163131/EXPLORE-Crie-Conexoes-Com-O-Seu-Mundo",
                 },
                 {
-                    label: "Ver a Competição",
+                    label: "Ver Competição",
                     url: "https://www.instagram.com/senac.saomiguel/reel/C-_I1yopk0u/",
+                },
+            ],
+        },
+        {
+            image: Portfolio,
+            title: "Meu Portifólio",
+            description:
+                "Projeto deste Portifólio criado usando Vite, React e TypeScript.",
+            links: [
+                {
+                    label: "Ver o Projeto",
+                    url: "https://oruansampaio.github.io/my-portfolio/",
+                },
+                {
+                    label: "Ver o Código",
+                    url: "https://github.com/oruansampaio/my-portfolio",
                 },
             ],
         },
@@ -77,7 +94,7 @@ const Projects = () => {
                                     <Typography variant="body2" color="text.secondary" mb={2}>
                                         {project.description}
                                     </Typography>
-                                    <Box display="flex" justifyContent="space-between">
+                                    <Box display="flex" justifyContent="space-evenly">
                                         {project.links.map((link, linkIndex) => (
                                             <StyledButton
                                                 key={linkIndex}
