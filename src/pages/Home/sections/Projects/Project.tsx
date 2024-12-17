@@ -47,7 +47,7 @@ const Projects = () => {
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={4}>
                         <ProjectCard>
-                            <ProjectImage src="src\assets\images\projetoExplore.png" alt="Aplicativo Explore" />
+                            <ProjectImage src=".\src\assets\images\projetoExplore.png" alt="Aplicativo Explore" />
                             <ProjectContent>
                                 <Typography variant="h6" color="text.primary" mb={1}>
                                     Aplicativo Explore
