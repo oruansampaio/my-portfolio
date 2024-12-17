@@ -21,7 +21,7 @@ const Skills = () => {
 
     const SkillCard = styled(Box)(({ theme }) => ({
         textAlign: "center",
-        width: "300px",
+        width: "200px",
         padding: "20px",
         border: `1px solid ${theme.palette.secondary.contrastText}`,
         borderRadius: "10px",
@@ -33,6 +33,8 @@ const Skills = () => {
 
     const CarouselContainer = styled(Box)(() => ({
         marginTop: "50px",
+        marginLeft: "50px",
+        marginRight: "50px",
         "& .slick-slide": {
             display: "flex",
             justifyContent: "center",
@@ -50,12 +52,14 @@ const Skills = () => {
                 breakpoint: 960,
                 settings: {
                     slidesToShow: 2,
+                    dots: false,
                 },
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
+                    dots: false,
                 },
             },
         ],
