@@ -53,7 +53,7 @@ const Skills = () => {
             name: "Técnico em Informática para Internet",
             issuer: "Senac",
             date: "22/11/2024",
-            src: ".\src\assets\images\tecnicoInformaticaInternet.png",
+            src: "./src/assets/images/tecnicoInformaticaInternet.png",
             alt: "Certificado 1",
         },
         {
@@ -61,7 +61,7 @@ const Skills = () => {
             name: "Desenvolvedor Front-End",
             issuer: "Senac",
             date: "23/12/2023",
-            src: ".\src\assets\images\desenvolvedorFrontEnd.png",
+            src: "./src/assets/images/DesenvolvedorFrontEnd.png",
             alt: "Certificado 2",
         },
         {
@@ -69,15 +69,15 @@ const Skills = () => {
             name: "Desenvolvedor Back-End",
             issuer: "Senac",
             date: "22/06/2024",
-            src: ".\src\assets\images\DesenvolvedorBackEnd.png",
+            src: "./src/assets/images/DesenvolvedorBackEnd.png",
             alt: "Certificado 3",
         },
         {
             type: "Certificado",
             name: "Desenvolvedor Mobile",
-            issuer: "Senac",
+            issuer: "Udemy",
             date: "22/11/2024",
-            src: ".\src\assets\images\desenvolvedorMobile.png",
+            src: "./src/assets/images/DesenvolvedorMobile.png",
             alt: "Certificado 4",
         },
     ];
@@ -127,7 +127,7 @@ const Skills = () => {
 
                 {/* Certifications Carousel */}
                 <Typography variant="h2" textAlign="center" color="secondary.contrastText" mt={8} mb={4}>
-                    Diplomas e Certificados
+                    Certificados
                 </Typography>
                 <CarouselContainer>
                     <Slider {...sliderSettings}>
