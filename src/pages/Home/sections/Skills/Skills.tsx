@@ -97,7 +97,7 @@ const Skills = () => {
                     <Slider {...sliderSettings}>
                         <Box p={2} textAlign="center">
                             <img
-                                src=".\src\assets\images\TecnicoInformaticaInternet.png"
+                                src=".\src\assets\images\tecnicoInformaticaInternet.png"
                                 alt="Certificado 1"
                                 style={{ width: "100%", borderRadius: "10px" }}
                             />
