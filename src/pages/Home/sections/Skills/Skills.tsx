@@ -77,62 +77,15 @@ const Skills = () => {
                 </Typography>
                 <CarouselContainer>
                     <Slider {...sliderSettings}>
-                        <Box p={2}>
-                            <SkillCard>
-                                <Typography variant="h6" color="secondary.contrastText">
-                                    HTML/CSS
-                                </Typography>
-                            </SkillCard>
-                        </Box>
-                        <Box p={2}>
-                            <SkillCard>
-                                <Typography variant="h6" color="secondary.contrastText">
-                                    JavaScript
-                                </Typography>
-                            </SkillCard>
-                        </Box>
-                        <Box p={2}>
-                            <SkillCard>
-                                <Typography variant="h6" color="secondary.contrastText">
-                                    TypeScript
-                                </Typography>
-                            </SkillCard>
-                        </Box>
-                        <Box p={2}>
-                            <SkillCard>
-                                <Typography variant="h6" color="secondary.contrastText">
-                                    Python
-                                </Typography>
-                            </SkillCard>
-                        </Box>
-                        <Box p={2}>
-                            <SkillCard>
-                                <Typography variant="h6" color="secondary.contrastText">
-                                    React
-                                </Typography>
-                            </SkillCard>
-                        </Box>
-                        <Box p={2}>
-                            <SkillCard>
-                                <Typography variant="h6" color="secondary.contrastText">
-                                    React Native
-                                </Typography>
-                            </SkillCard>
-                        </Box>
-                        <Box p={2}>
-                            <SkillCard>
-                                <Typography variant="h6" color="secondary.contrastText">
-                                    Node.js
-                                </Typography>
-                            </SkillCard>
-                        </Box>
-                        <Box p={2}>
-                            <SkillCard>
-                                <Typography variant="h6" color="secondary.contrastText">
-                                    Git/GitHub
-                                </Typography>
-                            </SkillCard>
-                        </Box>
+                        {skills.map((skill, index) => (
+                            <Box key={index} p={2}>
+                                <SkillCard>
+                                    <Typography variant="h6" color="secondary.contrastText">
+                                        {skill}
+                                    </Typography>
+                                </SkillCard>
+                            </Box>
+                        ))}
                     </Slider>
                 </CarouselContainer>
 
@@ -144,7 +97,7 @@ const Skills = () => {
                     <Slider {...sliderSettings}>
                         <Box p={2} textAlign="center">
                             <img
-                                src="./src/assets/images/TecnicoInformaticaInternet.png"
+                                src=".\src\assets\images\TecnicoInformaticaInternet.png"
                                 alt="Certificado 1"
                                 style={{ width: "100%", borderRadius: "10px" }}
                             />
@@ -160,7 +113,7 @@ const Skills = () => {
                         </Box>
                         <Box p={2} textAlign="center">
                             <img
-                                src="./src/assets/images/DesenvolvedorFrontEnd.png"
+                                src=".\src\assets\images\DesenvolvedorFrontEnd.png"
                                 alt="Certificado 2"
                                 style={{ width: "100%", borderRadius: "10px" }}
                             />
@@ -176,7 +129,7 @@ const Skills = () => {
                         </Box>
                         <Box p={2} textAlign="center">
                             <img
-                                src="./src/assets/images/DesenvolvedorBackEnd.png"
+                                src=".\src\assets\images\DesenvolvedorBackEnd.png"
                                 alt="Certificado 3"
                                 style={{ width: "100%", borderRadius: "10px" }}
                             />
@@ -192,7 +145,7 @@ const Skills = () => {
                         </Box>
                         <Box p={2} textAlign="center">
                             <img
-                                src="./src/assets/images/DesenvolvedorMobile.png"
+                                src=".\src\assets\images\DesenvolvedorMobile.png"
                                 alt="Certificado 4"
                                 style={{ width: "100%", borderRadius: "10px" }}
                             />
